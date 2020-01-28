@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+body {
+  background: rgb(30, 30, 33);
+  background: radial-gradient(
+    circle,
+    rgba(30, 30, 33, 1) 0%,
+    rgba(125, 99, 255, 1) 100%
+  );
+}
+/* #7d63ff */
+/* header */
+nav {
+  display: flex;
+}
+
+.left-nav {
+  display: flex;
+  margin-left: 100px;
+}
+.link-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  text-align: center;
+}
+.link-nav:first-child {
+  margin-right: 20px;
+}
+.link-nav:nth-child(2) {
+  margin-right: 20px;
+}
+
+.h1 {
+  background-color: #00b2d0;
+  height: 100px;
+}
+.h2 {
+  background-color: #00b2d0;
+  height: 70px;
+}
+.h3 {
+  background-color: #00b2d0;
+  height: 90px;
+}
+.link-nav > a {
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: rgb(218, 218, 218);
+  padding: 15px 0;
+  text-decoration: none;
+  background-color: #00b2d0;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  align-self: end;
+  background: url("public/logo.png") no-repeat center center/contain;
+  width: 100px;
+  height: 100px;
+  animation: logo-ani 1s linear infinite;
+}
+@keyframes logo-ani {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.h-active {
+  transform: translateY(0) !important;
+  transition: all 1s ease-in;
+}
+.link-nav:first-child {
+  transform: translateY(-100px);
+}
+.link-nav:nth-child(2) {
+  transform: translateY(-80px);
+}
+.link-nav:nth-child(3) {
+  transform: translateY(-100px);
+}
+/* Events */
+.events {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  padding: 0px 80px;
+  margin-top: 50px;
+}
+.event {
+  margin-right: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.event:hover {
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.05);
+  transform: scale(1.02);
+  transition: all 1.3s linear;
+}
+.event-image {
+  background: url("public/57-512.png") no-repeat center center/contain;
+  height: 200px;
+  width: 200px;
+}
+.event-image2 {
+  background: url("public/images.jpeg") no-repeat center center/contain;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+}
+
+.event-image3 {
+  background: url("public/pngtree-digital-book-logo-electronic-book-logo-template-online-learning-logo-designs-image_333498.jpg")
+    no-repeat center center/contain;
+  border-radius: 10px;
+  height: 200px;
+  width: 200px;
+}
+.event-desc {
+  margin-top: 10px;
+  text-align: left;
+}
+.event-date {
+  margin-top: 6px;
+  text-align: left;
+}
+.events-title {
+  color: #fff;
+  text-align: left;
+  margin-left: 100px;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+/* Events */
+
+footer {
+  color: #fff;
+  margin-top: 30px;
+  height: 200px;
+  width: 100%;
+  background: radial-gradient(circle, rgba(125, 99, 255, 1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.footer-icon {
+  cursor: pointer;
+  background: radial-gradient(circle, rgba(125, 99, 255, 1) 100%);
+  padding: 4px;
+}
+.footer-icon:hover {
+  background-color: #fff;
+  color: rgba(125, 99, 255, 1);
+  border-radius: 10px;
+}
+@media all and (max-width: 600px) {
+  .m_mt20 {
+    margin-top: 30px;
+  }
+}
+
+@media all and (max-width: 509px) {
+  .events {
+    margin: 0 auto;
+  }
+  .logo {
+    display: none;
+  }
+  .left-nav {
+    margin-left: 30px;
+  }
+  .link-nav {
+    width: 80px;
+    font-size: 1rem;
+  }
+  .contact-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}
